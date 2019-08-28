@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   font: calc(100% * 0.625) / 1.15 HelveticaNeue, Helvetica, sans-serif;
 }
@@ -16,18 +17,7 @@ body {
 header {
   background-color: #252525d2;
   color: #fff;
-  padding: 2rem;
-}
-
-header > h1,
-main {
-  width: 95%;
-  max-width: 120rem;
-  margin: 0 auto;
-}
-
-legend > h3 {
-  margin: 0;
+  padding: 20px;
 }
 
 main {
@@ -36,10 +26,6 @@ main {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-}
-
-.main__form {
-  flex: 4;
 }
 
 .feature {
@@ -52,6 +38,10 @@ main {
   margin-top: 0.8rem;
 }
 
+.feature__selected {
+  background-color: lightblue;
+}
+
 .feature__name {
   font-size: inherit;
   line-height: inherit;
@@ -62,17 +52,10 @@ main {
   margin-top: 0.8rem;
 }
 
-/* Hide radios from sighted users,
-while keeping them available to the keyboard */
-.feature__option {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
+.feature__list {
+  list-style: none;
+  padding-left: 0px;
+  width: 90%;
 }
 
 .feature__label {
@@ -86,18 +69,14 @@ while keeping them available to the keyboard */
   border-color: #888;
 }
 
-.feature__option:checked + .feature__label {
-  border: 0.2rem solid #0070c9;
-}
-
-.feature__option:focus + .feature__label {
-  box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.3rem #83c0fd;
-}
 
 .feature__option:not(:checked) + .feature__label {
   cursor: pointer;
 }
 
+.main__form {
+  width: 50%;
+}
 .main__summary {
   flex: 3;
   margin-left: 0.2rem;
